@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • NeoTech Digital</title>
+  <meta name="description" content="Contact NeoTech Digital — get a quote, speak to our team." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml"/>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/portfolio.js"></script>
+  <script defer src="assets/js/typewriter.js"></script>
+  <script defer src="assets/js/status.js"></script>
+  <!-- ScrollReveal & GSAP for animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- tsParticles for futuristic particles background -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- SEO: Structured Data -->
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Organization", "name": "NeoTech Digital", "url": "https://example.com", "logo": "https://example.com/assets/icons/favicon.svg", "sameAs": ["https://twitter.com/example", "https://www.linkedin.com/company/example"], "foundingDate": "2015-01-01", "description": "Full-service IT company specializing in web/app development, software solutions, and digital marketing."}
+  </script>
+</head>
+<body data-theme="dark">
+<div id="particles"></div>
+<header class="nav glass">
+  <a class="brand" href="index.html">
+    <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 4v12l-7 4-7-4V6l7-4zM6 7.5l6 3.5 6-3.5M12 21V11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>NeoTech</span>
+  </a>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a class="btn cta" href="contact.html">Contact</a>
+  </nav>
+  <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+    <i data-lucide="moon"></i>
+  </button>
+  <button id="menuToggle" class="icon-btn mobile-only" aria-label="Open menu">
+    <i data-lucide="menu"></i>
+  </button>
+</header>
+<main>
+
+<section class="section">
+  <div class="grid-2">
+    <div>
+      <h1>Let’s build something great</h1>
+      <p>Tell us about your project. We’ll get back within 1 business day.</p>
+      <form class="form" method="POST" action="contact.php" id="contactForm" novalidate>
+        <input type="text" name="name" placeholder="Your name" required/>
+        <input type="email" name="email" placeholder="Email address" required/>
+        <input type="text" name="subject" placeholder="Subject" required/>
+        <textarea name="message" placeholder="Project details" rows="6" required></textarea>
+        <!-- Honeypot -->
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off"/>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+      <div id="formMsg" role="status" aria-live="polite"></div>
+      <div class="livechat-hint">Prefer chat? Use the widget in the corner.</div>
+    </div>
+    <div class="map glass">
+      <iframe title="Office Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11610323074!2d72.7410992!3d19.0821978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63a3d5fb123%3A0xdea4d1f1f8e17836!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1682899999999">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer glass">
+  <div class="footer-grid">
+    <div>
+      <h4>NeoTech Digital</h4>
+      <p>We build fast, beautiful, and scalable digital products.</p>
+      <div class="stats">
+        <div class="stat"><span class="num" data-count="100">0</span>+ Projects</div>
+        <div class="stat"><span class="num" data-count="10">0</span>+ Years</div>
+      </div>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li>Web & App Development</li>
+        <li>Software Solutions</li>
+        <li>Digital Marketing</li>
+        <li>Branding & Design</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Follow</h5>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Newsletter</h5>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); alert('Thanks for subscribing!')">
+        <input type="email" placeholder="Email address" required aria-label="Email"/>
+        <button class="btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="subfooter">© 2025 NeoTech Digital • Built with ❤️</div>
+</footer>
+<!-- Live chat (Tawk.to placeholder) -->
+<script>
+  // Paste your Tawk.to snippet here when ready
+</script>
+<script>
+  lucide.createIcons();
+</script>
+</body>
+</html>

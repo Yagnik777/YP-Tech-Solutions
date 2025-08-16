@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services • NeoTech Digital</title>
+  <meta name="description" content="Services: Web/App Development, Software Solutions, Digital Marketing, Social Media, Branding, E‑commerce." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml"/>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/portfolio.js"></script>
+  <script defer src="assets/js/typewriter.js"></script>
+  <script defer src="assets/js/status.js"></script>
+  <!-- ScrollReveal & GSAP for animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- tsParticles for futuristic particles background -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- SEO: Structured Data -->
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Organization", "name": "NeoTech Digital", "url": "https://example.com", "logo": "https://example.com/assets/icons/favicon.svg", "sameAs": ["https://twitter.com/example", "https://www.linkedin.com/company/example"], "foundingDate": "2015-01-01", "description": "Full-service IT company specializing in web/app development, software solutions, and digital marketing."}
+  </script>
+</head>
+<body data-theme="dark">
+<div id="particles"></div>
+<header class="nav glass">
+  <a class="brand" href="index.html">
+    <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 4v12l-7 4-7-4V6l7-4zM6 7.5l6 3.5 6-3.5M12 21V11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>NeoTech</span>
+  </a>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a class="btn cta" href="contact.html">Contact</a>
+  </nav>
+  <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+    <i data-lucide="moon"></i>
+  </button>
+  <button id="menuToggle" class="icon-btn mobile-only" aria-label="Open menu">
+    <i data-lucide="menu"></i>
+  </button>
+</header>
+<main>
+
+<section class="section">
+  <h1>Services</h1>
+  <div class="cards long">
+    <article class="card detailed">
+      <h3>Web & App Development</h3>
+      <ul>
+        <li>Responsive development</li>
+        <li>PWAs</li>
+        <li>CMS (WordPress, Headless)</li>
+        <li>APIs (REST/GraphQL)</li>
+      </ul>
+    </article>
+    <article class="card detailed">
+      <h3>Software Solutions</h3>
+      <ul>
+        <li>Custom ERP & CRM</li>
+        <li>Multi-tenant SaaS</li>
+        <li>Systems integration</li>
+      </ul>
+    </article>
+    <article class="card detailed">
+      <h3>Digital Marketing & SEO</h3>
+      <ul>
+        <li>Technical & On-page SEO</li>
+        <li>PPC Campaigns</li>
+        <li>Content Strategy</li>
+      </ul>
+    </article>
+    <article class="card detailed">
+      <h3>Social Media Management</h3>
+      <ul>
+        <li>Strategy & calendars</li>
+        <li>Ad management</li>
+        <li>Community engagement</li>
+      </ul>
+    </article>
+    <article class="card detailed">
+      <h3>Branding & Graphic Design</h3>
+      <ul>
+        <li>Logo & identity</li>
+        <li>UI/UX design</li>
+        <li>Print & collateral</li>
+      </ul>
+    </article>
+    <article class="card detailed">
+      <h3>E‑commerce Solutions</h3>
+      <ul>
+        <li>Shopify / WooCommerce</li>
+        <li>Custom carts</li>
+        <li>Payment gateways</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+</main>
+<footer class="footer glass">
+  <div class="footer-grid">
+    <div>
+      <h4>NeoTech Digital</h4>
+      <p>We build fast, beautiful, and scalable digital products.</p>
+      <div class="stats">
+        <div class="stat"><span class="num" data-count="100">0</span>+ Projects</div>
+        <div class="stat"><span class="num" data-count="10">0</span>+ Years</div>
+      </div>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li>Web & App Development</li>
+        <li>Software Solutions</li>
+        <li>Digital Marketing</li>
+        <li>Branding & Design</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Follow</h5>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Newsletter</h5>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); alert('Thanks for subscribing!')">
+        <input type="email" placeholder="Email address" required aria-label="Email"/>
+        <button class="btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="subfooter">© 2025 NeoTech Digital • Built with ❤️</div>
+</footer>
+<!-- Live chat (Tawk.to placeholder) -->
+<script>
+  // Paste your Tawk.to snippet here when ready
+</script>
+<script>
+  lucide.createIcons();
+</script>
+</body>
+</html>

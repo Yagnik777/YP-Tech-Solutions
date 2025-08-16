@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home • NeoTech Digital</title>
+  <meta name="description" content="NeoTech Digital — Web & App Development, Software Solutions, Digital Marketing." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml"/>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/portfolio.js"></script>
+  <script defer src="assets/js/typewriter.js"></script>
+  <script defer src="assets/js/status.js"></script>
+  <script src="https://unpkg.com/three@0.161.0/build/three.min.js"></script>
+  <script defer src="assets/js/hero3d.js"></script>
+  <!-- ScrollReveal & GSAP for animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- tsParticles for futuristic particles background -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- SEO: Structured Data -->
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Organization", "name": "NeoTech Digital", "url": "https://example.com", "logo": "https://example.com/assets/icons/favicon.svg", "sameAs": ["https://twitter.com/example", "https://www.linkedin.com/company/example"], "foundingDate": "2015-01-01", "description": "Full-service IT company specializing in web/app development, software solutions, and digital marketing."}
+  </script>
+</head>
+<body data-theme="dark">
+<div id="particles"></div>
+<header class="nav glass">
+  <a class="brand" href="index.html">
+    <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 4v12l-7 4-7-4V6l7-4zM6 7.5l6 3.5 6-3.5M12 21V11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>NeoTech</span>
+  </a>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a class="btn cta" href="contact.html">Contact</a>
+  </nav>
+  <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+    <i data-lucide="moon"></i>
+  </button>
+  <button id="menuToggle" class="icon-btn mobile-only" aria-label="Open menu">
+    <i data-lucide="menu"></i>
+  </button>
+</header>
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="gradient-text">We Build the Future</h1>
+    <p class="typewriter">We Provide <span id="tw"></span></p>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn primary">Get a Quote</a>
+      <a href="services.html" class="btn ghost">Explore Services</a>
+    </div>
+    <div class="status-widget glass">
+      <span class="dot"></span>
+      <span id="statusText">Checking project status…</span>
+    </div>
+    <div class="tech-float">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+    </div>
+  </div>
+  <div class="clients glass">
+    <div class="marquee">
+      <img src="assets/img/clients/c1.svg" alt="Client 1"/>
+      <img src="assets/img/clients/c2.svg" alt="Client 2"/>
+      <img src="assets/img/clients/c3.svg" alt="Client 3"/>
+      <img src="assets/img/clients/c4.svg" alt="Client 4"/>
+      <img src="assets/img/clients/c5.svg" alt="Client 5"/>
+      <img src="assets/img/clients/c6.svg" alt="Client 6"/>
+    </div>
+  </div>
+</section>
+
+<section class="services section">
+  <div class="section-head">
+    <h2>What we do</h2>
+    <div class="service-selector">
+      <label for="need">What do you need?</label>
+      <select id="need">
+        <option value="all" selected>All</option>
+        <option value="web">Web & App Development</option>
+        <option value="software">Software Solutions</option>
+        <option value="marketing">Digital Marketing & SEO</option>
+        <option value="social">Social Media Management</option>
+        <option value="branding">Branding & Graphic Design</option>
+        <option value="ecom">E‑commerce Solutions</option>
+      </select>
+    </div>
+  </div>
+  <div class="cards" id="serviceCards">
+    <article class="card service" data-tag="web">
+      <i data-lucide="code-2"></i>
+      <h3>Web & App Development</h3>
+      <p>Responsive sites, PWAs, CMS, REST/GraphQL APIs.</p>
+    </article>
+    <article class="card service" data-tag="software">
+      <i data-lucide="cog"></i>
+      <h3>Software Solutions</h3>
+      <p>Custom ERP, CRM, SaaS development tailored to scale.</p>
+    </article>
+    <article class="card service" data-tag="marketing">
+      <i data-lucide="trending-up"></i>
+      <h3>Digital Marketing & SEO</h3>
+      <p>SEO, PPC, content marketing for measurable growth.</p>
+    </article>
+    <article class="card service" data-tag="social">
+      <i data-lucide="share-2"></i>
+      <h3>Social Media Management</h3>
+      <p>Strategy, ads, and engagement that builds community.</p>
+    </article>
+    <article class="card service" data-tag="branding">
+      <i data-lucide="palette"></i>
+      <h3>Branding & Graphic Design</h3>
+      <p>Logo, UI/UX, and print media with personality.</p>
+    </article>
+    <article class="card service" data-tag="ecom">
+      <i data-lucide="shopping-bag"></i>
+      <h3>E‑commerce Solutions</h3>
+      <p>Shopify, WooCommerce, and custom storefronts.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="grid-2">
+    <div>
+      <h2>Featured Work</h2>
+      <p>Explore our case studies across web, app, and marketing.</p>
+      <a class="btn" href="portfolio.html">See Portfolio</a>
+    </div>
+    <div class="mockup glass">
+      <div class="blob"></div>
+      <img src="assets/img/placeholder-mock.png" alt="Project Mockup" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer glass">
+  <div class="footer-grid">
+    <div>
+      <h4>NeoTech Digital</h4>
+      <p>We build fast, beautiful, and scalable digital products.</p>
+      <div class="stats">
+        <div class="stat"><span class="num" data-count="100">0</span>+ Projects</div>
+        <div class="stat"><span class="num" data-count="10">0</span>+ Years</div>
+      </div>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li>Web & App Development</li>
+        <li>Software Solutions</li>
+        <li>Digital Marketing</li>
+        <li>Branding & Design</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Follow</h5>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Newsletter</h5>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); alert('Thanks for subscribing!')">
+        <input type="email" placeholder="Email address" required aria-label="Email"/>
+        <button class="btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="subfooter">© 2025 NeoTech Digital • Built with ❤️</div>
+</footer>
+<!-- Live chat (Tawk.to placeholder) -->
+<script>
+  // Paste your Tawk.to snippet here when ready
+</script>
+<script>
+  lucide.createIcons();
+</script>
+</body>
+</html>
